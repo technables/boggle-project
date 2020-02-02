@@ -1,13 +1,12 @@
 <div class="container">
+
     <div class="container-head">
         <%= image_tag("boggle.png", :alt => "boggle logo") %>
     </div>
     <div class="container-body">
         <h3>Welcome to Boggle API</h3>
         <div class="content-info">
-            <p>
-                This API provides functionalities to smoothly operate a Boggle game.
-            </p>
+            
             <p>
                 <a href = "https://en.wikipedia.org/wiki/Boggle"
             target = "_blank˚" > Boggle </a> is a word game invented by Allan Turoff and originally distributed by Parker Brothers.
@@ -18,48 +17,51 @@
 
         <div class="api-list">
             <p>Here are the list of APIs provided.</p>
-            <table>
-                <thead>
-                    <th>#</th>
-                    <th>name</th>
-                    <th> api url </th>
-                    <th> description </th>
+            <table class="table">
+                <thead class="thead-dark text-capitalize">
+                    <th scope="col">#</th>
+                    <th scope="col">name</th>
+                    <th scope="col"> api url </th>
+                    <th scope="col"> description </th>
                 </thead>
                 <tbody>
                     <tr>
-                        <td>1</td>
+                        <th scope="row">1</td>
                         <td>index</td>
-                        <td>/api/v1</td>
+                        <td><strong>/api/v1</strong></td>
                         <td>provides welcome message with the api version</td>
                     </tr>
                     <tr>
-                        <td>2</td>
+                        <th scope="row">2</td>
                         <td>init board</td>
-                        <td>/api/v1/initboard?type={board_type}</td>
+                        <td><strong>/api/v1/initboard?type={board_type}</strong></td>
                         <td> param: board_data (defines the type of board user wants to play. for 4*4 board, board_type: 4) <br/> 
-                             sample request: /api/v1/initboard?type=4 <br/>
-                             sample response: {"message":"GAME_INITIATED","success":true,"data":{"board_data":"aexhsrrieciicttn"}}
+                             sample request: <strong>/api/v1/initboard?type=4 </strong><br/>
+                             sample response: <strong>{"message":"GAME_INITIATED","success":true,"data":{"board_data":"aexhsrrieciicttn"}}</strong>
 
                         </td>
                     </tr>
                     <tr>
-                        <td>3</td>
+                        <th scope="row">3</td>
                         <td>process word</td>
-                        <td>/api/v1/processword?word={word}</td>
+                        <td><strong>/api/v1/processword?word={word}</strong></td>
                         <td> param: word (defines the word user submit to evaluate points<br/> 
-                             sample request 1: /api/v1/processword?word=boggle <br/>
-                             sample response 1: {"message":"MSG_EVALUATION_SUCCESS","success":true,"data":{"is_correct":true,"score":4}} <br/>
-                             sample request 2: /api/v1/processword?word=asdfg <br/>
-                             sample response 2: {"message":"MSG_EVALUATION_SUCCESS","success":true,"data":{"is_correct":false,"score":0}} 
+                             sample request 1: <strong>/api/v1/processword?word=boggle </strong><br/>
+                             sample response 1: <strong>{"message":"MSG_EVALUATION_SUCCESS","success":true,"data":{"is_correct":true,"score":4}}</strong> <br/>
+                             sample request 2: <strong>/api/v1/processword?word=asdfg </strong> <br/>
+                             sample response 2: <strong>{"message":"MSG_EVALUATION_SUCCESS","success":true,"data":{"is_correct":false,"score":0}} </strong>
 
                         </td>
                     </tr>
                 </tbody>
             </table>
         </div>
-        <div content-footer>
-            <p>Implement these apis and have fun playing Boggle</p>
-        </div>
+       
     </div>
+
+     <div content-footer>
+            <p class="font-weight-normal h4">Implement these apis and have fun playing Boggle :)</p>
+        </div>
     
 </div>
+
