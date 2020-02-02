@@ -1,0 +1,8 @@
+.word-text {
+    text-transform: uppercase;
+    font-weight: 300;
+    font-size: 22px;
+    letter-spacing: 3px;
+    text-decoration: underline;
+    margin-left: 5px;
+}

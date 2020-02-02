@@ -1,0 +1,24 @@
+.word-list-wrapper {
+    margin: 15px 0;
+    height: 205px;
+    overflow-y: auto;
+}
+
+.word-list-wrapper li {
+    list-style-type: none;
+    padding: 5px 10px;
+    font-size: 15px;
+    text-transform: uppercase;
+}
+
+.total-score {
+    border-top: 1px solid;
+    border-color: #ccc5c5;
+    padding: 10px 0;
+}
+
+.score-title {
+    font-weight: bold !important;
+    margin: 0px 0px 0 60px !important;
+    width: 100px !important;
+}

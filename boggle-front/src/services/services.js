@@ -11,7 +11,6 @@ function initGame(data) {
     var urlParam = '?type=' + data.boardType;
     return fetch(EndPoint.BOGGLE.NEW_GAME + urlParam)
         .then(res => {
-            debugger;
             return res.json();
         })
         .then(response => {
@@ -41,7 +40,6 @@ function processWord(data) {
 
     return fetch(requestUrl)
         .then(res => {
-            debugger;
             return res.json();
         }).then(res => {
             if (res && res.success && res.data) {

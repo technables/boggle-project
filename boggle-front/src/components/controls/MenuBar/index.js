@@ -4,6 +4,7 @@ import { connect } from 'react-redux';
 import { compose } from 'redux';
 import { withRouter } from 'react-router-dom';
 import ReactStopWatch from 'react-stopwatch';
+import './menu.css';
 
 class MenuBar extends React.Component{
     constructor(props){
@@ -11,25 +12,30 @@ class MenuBar extends React.Component{
     }
 
     routeChange(){
-        this.props.history.push("/scoreboard");
+        //this.props.history.push("/scoreboard");
     }
 
     render() {
         let {timeLimit} = this.props;
 
         return (
-            <div className="menu-wrapper">
-                <div className="menu-bar">
-                <button className="btn" title="Back to Home"
+            <div class="card text-center menu-wrapper">
+                <div class="card-header">
+                    <ul class="nav nav-pills card-header-pills">
+                    <li class="nav-item">
+                        
+                        <button className="nav-link active" title="Back to Home"
                     onClick={
                         ()=>this.props.onClick? this.props.onClick("home"):null
                     }
                     >
-                    <i className="fa fa-home"></i> 
+                    
                     Back to Home
-                </button>
-
-                {
+                    </button>
+                    </li>
+                    
+                    <li class="nav-item">
+                    {
                     timeLimit && <React.Fragment>
                         <ReactStopWatch
                             seconds={0}
@@ -43,13 +49,13 @@ class MenuBar extends React.Component{
                             render={
                                 ({formatted,hours, minutes,seconds})=>{
                                     var timerClass="timer-green";
-                                    if(minutes>=1 && seconds>30)
+                                    if(minutes>=1 && seconds>=30)
                                         timerClass="timer-red";
                                     else if (minutes>=1)
                                         timerClass="timer-yellow";
 
                                     return(
-                                        <span className={"boggle-stopwatch "+ timerClass}>
+                                        <span className={"nav-link disabled boggle-stopwatch "+ timerClass}>
                                             Elapsed: {formatted}
                                         </span>
                                     )
@@ -58,8 +64,12 @@ class MenuBar extends React.Component{
                         />
                     </React.Fragment>
                 }
+                    </li>
+                    </ul>
                 </div>
             </div>
+
+            
         )
     }
 }

@@ -15,6 +15,9 @@ import {confirmAlert} from 'react-confirm-alert';
 import MenuBar from '../../controls/MenuBar';
 
 import Aux from '../../../hoc/_Aux';
+import 'react-confirm-alert/src/react-confirm-alert.css'; 
+
+import './board.css';
 class Board extends React.Component{
     constructor(props){
         super(props);
@@ -137,7 +140,7 @@ class Board extends React.Component{
         var props = this.props;
         confirmAlert({
           title: "Quit Game",
-          message: "Are you sure you want to end this game ?",
+          message: "Are you sure you want to end current game ?",
           buttons: [
             {
               label: "Yes",
@@ -146,8 +149,8 @@ class Board extends React.Component{
               }
             },
             {
-              label: "Not Yet ",
-              onClick: () => console.log("submission canceled")
+              label: "No! I want to stay in the game ",
+              onClick: () => console.log("stay in the game")
             }
           ]
         });
@@ -159,13 +162,13 @@ class Board extends React.Component{
             <Aux>
                 <MenuBar onClick={this.onUserAction}/>
             <div className='row board-wrapper'>
-                <div className="col-8">
-                <div className="row">
-                    <div className="col-9 text-right">
+                <div className="col-7">
+                <div className="row word-container">
+                    <div className="col-6 text-left">
                     <CurrentWord currentWord={this.state.currentWord}/>
 
                     </div>
-                    <div className="col-3">
+                    <div className="col-6 text-center">
                         <button className="btn btn-primary" onClick={this.handleSubmit}>
                                 <span>Submit Word</span>
                             </button>
@@ -180,7 +183,7 @@ class Board extends React.Component{
             <div className="col-4">
                     <ScoreBoard/>
                     <button 
-                    className="btn btn-danger btn-end"
+                    className="btn btn-danger btn-end col-12 btn-leave"
                     onClick= {this.onEndButtonClick}
                     >
                         <span>Leave Game</span>

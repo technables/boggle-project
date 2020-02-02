@@ -21,7 +21,7 @@ const Cell = props => {
 
     return (
         <button 
-        className = { selected ? `cell-selected ${cellClass}`: `cell ${cellClass}`}
+        className = { selected ? `cell cell-selected ${cellClass}`: `cell ${cellClass}`}
         onClick={handleclick}
         >
             {letter}

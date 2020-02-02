@@ -2,6 +2,7 @@ import React from 'react'
 import {
     connect
 } from 'react-redux';
+import './wordlistcard.css'
 
 
 class WordListCard extends React.Component {
@@ -27,30 +28,30 @@ class WordListCard extends React.Component {
             );
             words = Object.keys(wordList);
             wordListHtml = words.map(function(word,index){
-                return <li key={index}>{word}</li>;
+                return <li  key={index}>{word}</li>;
             });
 
             scores = Object.values(wordList);
             scoreHtml = scores.map(function(score,index){
-                return <li key={index}>{score}</li>;
+                return <li  key={index}>{score}</li>;
             });
         }
 
         return (
             <div >
-                <div className="word-list-wrapper">
-                    <div className="words">
-                        <span className="h4">WORDS</span>
-                        <ul>{wordListHtml}</ul>
+                <div className="word-list-wrapper row">
+                    <div className="words-list col-6">
+                        <span className="h5">Words</span>
+                        <ul className="list-group">{wordListHtml}</ul>
                     </div>
-                    <div className="scores">
-                        <span className="h4">SCORES</span>
-                        <ul>{scoreHtml}</ul>
+                    <div className="scores-list col-6">
+                        <span className="h5">Scores</span>
+                        <ul >{scoreHtml}</ul>
                     </div>
                 </div>
                 <div className="total-score">
-                    <span className="h4">Total Score</span>
-                    <span className="h4">{score}</span>
+                    <span className="h5 col-6">Total Score</span>
+                    <span className="col-6 h5 score-title">{score}</span>
                 </div>
             </div>
         );

@@ -1,0 +1,26 @@
+
+.board-wrapper{
+    margin: 0 -7px!important;
+    
+}
+
+.word-container {
+    margin: 15px 0px;
+    border-bottom: 1px solid #f58120;
+    padding: 10px;
+    align-items: center;
+    max-width: 500px;
+}
+
+.score-board {
+    border: 1px solid #010111;
+    border-color: #e4dede;
+    border-radius: 15px;
+    padding: 15px;
+    margin: 15px 0;
+}
+
+.btn-leave {
+    padding: 10px !important;
+    text-transform: uppercase;
+}

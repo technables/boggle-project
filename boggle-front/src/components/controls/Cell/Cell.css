@@ -1,0 +1,20 @@
+button.cell {
+    width: 60px;
+    height: 60px;
+    border-radius: 5px;
+    padding: 0px;
+    margin: 5px;
+    font-size: 24px;
+    text-transform: capitalize;
+    outline: 0px !important;
+}
+
+.cell-selected {
+    background: #93cc68;
+    color: #fff;
+}
+
+.cell.hint {
+    background: #ffd3ae;
+    color: #fff;
+}

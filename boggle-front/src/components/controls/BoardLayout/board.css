@@ -1,0 +1,16 @@
+.board-area {
+    width: auto;
+    background: #ececec;
+    max-width: 300px;
+    padding: 10px;
+}
+
+.board-hint {
+    margin-left: 15px;
+}
+
+.hint-title{
+    font-size: 14px;
+    text-transform: capitalize;
+    font-style: italic;
+}

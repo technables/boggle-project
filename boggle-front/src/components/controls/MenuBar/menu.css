@@ -1,0 +1,16 @@
+.menu-wrapper{
+    margin-top: 20px;
+    width: 91%;
+}
+
+.timer-green {
+
+}
+
+.timer-yellow{
+    color: #f58120 !important;
+}
+
+.timer-red{
+    color: #dd4019 !important;
+}

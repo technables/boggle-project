@@ -57,17 +57,17 @@ handleSubmit(e){
        <div className="row">
        <div className='boggle-first'>
           <p>
-            Here are some instruction/rules associated with the game.
+            Here are some instructions/rules associated with the game.
           </p>
           <ul className='list-group'>
             <li className='list-group-item'>1. The game begins once the user select the board type. For example 4 * 4, 5 * 5 </li>
             <li className='list-group-item'>2. Based on the selected board type, ramdom letters are selected to fit in the type of board selected. </li>
-            <li className='list-group-item'>3. Each player is given two minutes countdown within which he/she has to complete the game. </li>
+            <li className='list-group-item'>3. Each player is given <strong>two minutes</strong> countdown within which he/she has to complete the game. </li>
             <li className="list-group-item">4. Each player searches for words that can be constructed from the letters of sequentially adjacent cubes.</li>
             <li className="list-group-item">5. Adjacent cubes refers the cubes that are horizontally, vertically or diagonally neighbouring to the current cube.</li>
             <li className="list-group-item">6. Words must be at least three letters long, may include singular and plural (or other derived forms) separately, but may not use the same letter cube more than once per word.</li>
             <li className="list-group-item">7. Once user submit each word, application evaluate the word, and displays appropriate message.</li>
-            <li className="list-group-item">8. As times hits zero (0), application stops the game and display the result.</li>
+            <li className="list-group-item">8. As time elapsed to <strong>00:02:00</strong>, application stops the game and display the result.</li>
             
           </ul>
        </div>
@@ -87,16 +87,20 @@ handleSubmit(e){
               
             </tr>
             <tr>
-              <td scope="row">3,4</td>
+              <td scope="row">3</td>
               <td>1</td>
             </tr>
             <tr>
-              <td scope="row">5</td>
+              <td scope="row">4</td>
               <td>2</td>
             </tr>
             <tr>
-              <td scope="row">6</td>
+              <td scope="row">5</td>
               <td>3</td>
+            </tr>
+            <tr>
+              <td scope="row">6</td>
+              <td>4</td>
             </tr>
             <tr>
               <td scope="row">7</td>
@@ -115,7 +119,7 @@ handleSubmit(e){
             <span className="title">Select Board Type</span>
             <select name='boardType' value={this.state.boardType} className="custom-select custom-select-sm boggleSelect" onChange={this.handleChange}>
               <option vale="4">4 * 4</option>
-              <option value="5">5 * 5</option>
+              {/* <option value="5">5 * 5</option> */}
             </select>
             <button className="btn btn-primary btnSubmit" onClick={this.handleSubmit}> Let's Play</button> 
           </div>

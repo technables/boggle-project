@@ -58,7 +58,6 @@ function processWord(obj = {
 
         service.processWord(obj)
             .then(res => {
-                debugger;
                 if (res) {
                     if (res.success) {
                         if (res.data && res.data.is_correct) {
