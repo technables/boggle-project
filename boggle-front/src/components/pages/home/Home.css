@@ -1,0 +1,39 @@
+.boggle-info {
+    margin-top: 20px;
+}
+
+.boggle-info p {
+    max-width: 100%;
+}
+
+.list-group li {
+    font-size: 13px;
+    background-color: transparent !important;
+}
+
+.boggle-first {
+    margin-top: 10px;
+    width: 60%;
+    padding: 15px;
+}
+
+.boggle-second {
+    margin-top: 10px;
+    width: 40%;
+    padding: 15px;
+}
+
+.boggle-points table {
+    font-size: 13px;
+}
+
+.boggle-game-wrapper {
+    background-color: #e2e2e2;
+    border: 1px solid #ececec;
+    padding: 14px;
+}
+
+.boggleSelect,
+.btnSubmit {
+    margin-top: 10px;
+}

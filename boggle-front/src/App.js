@@ -1,26 +1,71 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, {Suspense} from 'react';
+import {connect} from 'react-redux';
+import {Switch, Route} from 'react-router-dom';
+import Logo from './boggle.png';
+import {defaultRoute, internalRoutes } from "./routes";
+import "./App.css";
+import Aux from './hoc/_Aux';
+import  LazyLoader from './components/controls/LazyLoader';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+import InternalRoute from './components/controls/internalRoute/InternalRoute';
+class App extends React.Component{
+    constructor(props){
+        super(props);
+    }
+
+    render(){
+        
+        const dRoute = defaultRoute.map((route, index)=>{
+            return route.component ? (
+      
+                <Route
+                  key={index}
+                  path={route.path}
+                  exact={route.exact}
+                  name={route.name}
+                  render={props => <route.component {...props} />}
+                />
+              ) : null;
+            });
+
+            const intRoutes = internalRoutes.map((route, index) => {
+                return route.component ? (
+                  <InternalRoute
+                    key={index}
+                    path={route.path}
+                    exact={route.exact}
+                    name={route.name}
+                    component={route.component}
+                  />
+                ) : null;
+              });
+        
+
+        return (
+           <Aux>
+             <Suspense fallback={<LazyLoader/>}>
+                <Switch>
+                    <React.Fragment>
+                        <div className="container">
+                            <div className="logo-wrapper">
+                                <img src={Logo} className='logo' alt='boggle'/>
+                            </div>
+                            {dRoute}
+                            {intRoutes}
+                        </div>
+                    </React.Fragment>
+                </Switch>
+                </Suspense>
+          </Aux>
+        )
+    }
 }
+
+function mapStateToProps(state) {
+  const { currentUser } = state.game;
+  return { currentUser };
+}
+
+App = connect(mapStateToProps)(App);
 
 export default App;
