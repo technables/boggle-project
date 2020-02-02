@@ -12,7 +12,7 @@ class MenuBar extends React.Component{
     }
 
     routeChange(){
-        //this.props.history.push("/scoreboard");
+        this.props.history.push("/scoreboard");
     }
 
     render() {

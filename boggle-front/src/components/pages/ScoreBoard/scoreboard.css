@@ -1,0 +1,19 @@
+.score-board-wrapper {
+    margin: 15px 0;
+    width: 100%;
+    margin: 100px;
+    border: 1px solid;
+    max-width: 50%;
+    border-color: #ececec;
+    font-size: 20px;;
+    padding: 10px;
+}
+
+.scoreboard-title{
+    margin-left: 10px;
+}
+
+.score-board-wrapper table{
+    font-size: 20px;;
+
+}
