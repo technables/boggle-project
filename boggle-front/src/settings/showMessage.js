@@ -6,7 +6,6 @@ export function ShowMessage(type, msg){
         var options = {
             position: toast.POSITION.TOP_RIGHT
         };
-debugger;
         switch(type){
             case MessageType.WELCOME: 
             case MessageType.SUCCESS:
