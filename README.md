@@ -47,7 +47,7 @@ So, we will need to run two projects seperately to play the game.
   This will run the rails api on port 3001: (http://localhost:3001)
   
 
-### Step 2: Setting up React Front-End
+### Step 2: Setting Up React Front-End
   **Step 2.1:** Navigate to React Project
   ```bash
     $ cd boggle-front
