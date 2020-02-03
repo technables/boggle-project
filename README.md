@@ -48,6 +48,32 @@ So, we will need to run two projects seperately to play the game.
   
 
 ### Step 2: Setting up React Front-End
+  **Step 2.1:** Navigate to React Project
+  ```bash
+    $ cd boggle-front
+  ```
+  **Step 2.2:** Install all related packages for project
+  ```bash
+    $ npm install
+  ```
+  **Step 2.3:** Run the app
+  ```bash
+    $ npm start
+  ```
+  
+  This will run the rails api on port 3000: (http://localhost:3000)
+  
+  
+# Preview (screenshots)
+
+#### 1. Rails API HomePage
+
+#### 2.1. Boggle Game Home
+
+#### 2.2. Boggle Game Board
+
+#### 2.3. Boggle Game ScoreBoard
+
   
 ## License
 
