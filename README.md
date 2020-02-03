@@ -18,9 +18,9 @@ This repository is the implementation of the popular [Boggle Game](https://en.wi
   - ReactJs 16.12.0
   
  #### Other requirements
-  - npm
+  - npm 6.13.7
   
-  - node
+  - node v13.7.0
   
 # Steps to Run the APP
 
@@ -67,14 +67,31 @@ So, we will need to run two projects seperately to play the game.
 ## Preview (screenshots)
 
 #### 1. Rails API HomePage
+  <img src="boggle-api\resources\api-home.png" alt="API Home Page" style="zoom: 60%;" />
 
 #### 2.1. Boggle Game Home
+![Web Home](boggle-front/resources/web-home.png)
 
 #### 2.2. Boggle Game Board
-
+![Web Board](boggle-front/resources/web-board.png)
 #### 2.3. Boggle Game ScoreBoard
+![Web Score](boggle-front/resources/web-score.png)
 
-  
+
+#### Testing the Rails APIs
+
+**Step 1:** Navigate to Rails Project
+  ```bash
+    $ cd boggle-api
+  ```
+**Step 2:** Execute test
+  ```bash
+    $ bundle exec rspec
+  ```
+
+
+
+
 ## License
 
 MIT © [Technables](https://github.com/technables) 
