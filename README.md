@@ -22,3 +22,11 @@ This repository is the implementation of the popular [Boggle Game](https://en.wi
   
   - node
   
+  
+  
+## Credits and References
+
+- [Wikipedia Definition](https://en.wikipedia.org/wiki/Boggle)
+- [JS-Boggle-Game](https://github.com/zhouyuhang/JS-Boggle-Game)
+- [boggle-rails-react](https://github.com/zaagan/boggle-rails-react)
+  
