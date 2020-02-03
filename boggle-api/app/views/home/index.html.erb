@@ -28,15 +28,15 @@
                     <tr>
                         <th scope="row">1</td>
                         <td>index</td>
-                        <td><strong>/api/v1</strong></td>
+                        <td><strong>/v1/api</strong></td>
                         <td>provides welcome message with the api version</td>
                     </tr>
                     <tr>
                         <th scope="row">2</td>
                         <td>init board</td>
-                        <td><strong>/api/v1/initboard?type={board_type}</strong></td>
+                        <td><strong>/v1/api/initboard?type={board_type}</strong></td>
                         <td> param: board_data (defines the type of board user wants to play. for 4*4 board, board_type: 4) <br/> 
-                             sample request: <strong>/api/v1/initboard?type=4 </strong><br/>
+                             sample request: <strong>/v1/api/initboard?type=4 </strong><br/>
                              sample response: <strong>{"message":"GAME_INITIATED","success":true,"data":{"board_data":"aexhsrrieciicttn"}}</strong>
 
                         </td>
@@ -44,11 +44,11 @@
                     <tr>
                         <th scope="row">3</td>
                         <td>process word</td>
-                        <td><strong>/api/v1/processword?word={word}</strong></td>
+                        <td><strong>/v1/api/processword?word={word}</strong></td>
                         <td> param: word (defines the word user submit to evaluate points<br/> 
-                             sample request 1: <strong>/api/v1/processword?word=boggle </strong><br/>
+                             sample request 1: <strong>/v1/api/processword?word=boggle </strong><br/>
                              sample response 1: <strong>{"message":"MSG_EVALUATION_SUCCESS","success":true,"data":{"is_correct":true,"score":4}}</strong> <br/>
-                             sample request 2: <strong>/api/v1/processword?word=asdfg </strong> <br/>
+                             sample request 2: <strong>/v1/api/processword?word=asdfg </strong> <br/>
                              sample response 2: <strong>{"message":"MSG_EVALUATION_SUCCESS","success":true,"data":{"is_correct":false,"score":0}} </strong>
 
                         </td>
