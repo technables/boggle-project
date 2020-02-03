@@ -64,7 +64,7 @@ So, we will need to run two projects seperately to play the game.
   This will run the rails api on port 3000: (http://localhost:3000)
   
   
-# Preview (screenshots)
+## Preview (screenshots)
 
 #### 1. Rails API HomePage
 
