@@ -22,6 +22,9 @@ This repository is the implementation of the popular [Boggle Game](https://en.wi
   
   - node
   
+## License
+
+MIT © [Technables](https://github.com/technables) 
   
   
 ## Credits and References
