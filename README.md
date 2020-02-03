@@ -30,9 +30,24 @@ This repository consists of two sections.
  
 So, we will need to run two projects seperately to play the game.
 
-## Step 1: Setting Up Rails API
+### Step 1: Setting Up Rails API
+  **Step 1.1:** Navigate to Rails Project
+  ```bash
+    $ cd boggle-api
+  ```
+  **Step 1.2:** Bundle all related packages for project
+  ```bash
+    $ bundle install
+  ```
+  **Step 1.3:** Run rails server
+  ```bash
+    $ rails server
+  ```
+  
+  This will run the rails api on port 3001: (http://localhost:3001)
+  
 
-## Step 2: Setting up React Front-End
+### Step 2: Setting up React Front-End
   
 ## License
 
