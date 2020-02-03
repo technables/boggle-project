@@ -1,5 +1,4 @@
 import React from 'react';
-import ReactToolTip from 'react-tooltip'
 import { connect } from 'react-redux';
 import { compose } from 'redux';
 import { withRouter } from 'react-router-dom';
