@@ -78,7 +78,7 @@ So, we will need to run two projects seperately to play the game.
 ![Web Score](boggle-front/resources/web-score.png)
 
 
-#### Testing the Rails APIs
+## Testing the Rails APIs
 
 **Step 1:** Navigate to Rails Project
   ```bash
