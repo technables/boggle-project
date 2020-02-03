@@ -18,6 +18,12 @@ import Aux from '../../../hoc/_Aux';
 import 'react-confirm-alert/src/react-confirm-alert.css'; 
 
 import './board.css';
+
+import {MessageType} from '../../../data/constants';
+import {ShowMessage} from '../../../settings/showMessage';
+import {MessageHelper} from '../../../settings/messageHelper';
+
+
 class Board extends React.Component{
     constructor(props){
         super(props);
@@ -111,10 +117,11 @@ class Board extends React.Component{
         if(currentWord.length<3)
             return;
          if(currentWordList && currentWordList[currentWord]){
-             alert("already exists");
+            ShowMessage(MessageType.EXISTS,
+                MessageHelper(MessageType.EXISTS));
             this.clearCurrentAction();
          } 
-         
+         else {
          const {dispatch} = this.props;
          dispatch(actionList.processWord(
              {
@@ -124,6 +131,7 @@ class Board extends React.Component{
                  this.clearCurrentAction();
              }
          ));
+            }
 
       }
 
@@ -164,11 +172,11 @@ class Board extends React.Component{
             <div className='row board-wrapper'>
                 <div className="col-7">
                 <div className="row word-container">
-                    <div className="col-6 text-left">
+                    <div className="col-7 text-left">
                     <CurrentWord currentWord={this.state.currentWord}/>
 
                     </div>
-                    <div className="col-6 text-center">
+                    <div className="col-5 text-center">
                         <button className="btn btn-primary" onClick={this.handleSubmit}>
                                 <span>Submit Word</span>
                             </button>

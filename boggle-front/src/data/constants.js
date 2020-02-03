@@ -20,3 +20,15 @@ export const EVALUATION_INIT = "EVALUATION_INIT";
 export const EVALUATION_SUCCESS="EVALUATION_SUCCESS";
 export const EVALUATION_WRONG="EVALUATION_WRONG";
 export const EVALUATION_FAILURE="EVALUATION_FAILURE";
+
+
+//messagetypes
+
+export const MessageType = {
+    SUCCESS : "success",
+    WRONG: 'wrong',
+    EXISTS: 'exists',
+    WELCOME: 'welcome',
+    END: 'end',
+    ERROR:'error'
+};

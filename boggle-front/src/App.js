@@ -7,6 +7,10 @@ import "./App.css";
 import Aux from './hoc/_Aux';
 import  LazyLoader from './components/controls/LazyLoader';
 
+import {ToastContainer} from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
+
 import InternalRoute from './components/controls/internalRoute/InternalRoute';
 class App extends React.Component{
     constructor(props){
@@ -52,6 +56,7 @@ class App extends React.Component{
                             </div>
                             {dRoute}
                             {intRoutes}
+                            <ToastContainer/>
                         </div>
                     </React.Fragment>
                 </Switch>
