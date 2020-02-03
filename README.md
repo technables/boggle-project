@@ -22,6 +22,18 @@ This repository is the implementation of the popular [Boggle Game](https://en.wi
   
   - node
   
+# Steps to Run the APP
+
+This repository consists of two sections.
+  - Rails API
+  - React Front-End
+ 
+So, we will need to run two projects seperately to play the game.
+
+## Step 1: Setting Up Rails API
+
+## Step 2: Setting up React Front-End
+  
 ## License
 
 MIT © [Technables](https://github.com/technables) 
