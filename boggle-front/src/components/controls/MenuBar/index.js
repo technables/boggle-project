@@ -5,6 +5,11 @@ import { withRouter } from 'react-router-dom';
 import ReactStopWatch from 'react-stopwatch';
 import './menu.css';
 
+import {MessageType} from '../../../data/constants';
+import {ShowMessage} from '../../../settings/showMessage';
+import {MessageHelper} from '../../../settings/messageHelper'
+
+
 class MenuBar extends React.Component{
     constructor(props){
         super(props);
@@ -12,16 +17,18 @@ class MenuBar extends React.Component{
 
     routeChange(){
         this.props.history.push("/scoreboard");
+        ShowMessage(MessageType.END,
+            MessageHelper(MessageType.END));
     }
 
     render() {
         let {timeLimit} = this.props;
 
         return (
-            <div class="card text-center menu-wrapper">
-                <div class="card-header">
-                    <ul class="nav nav-pills card-header-pills">
-                    <li class="nav-item">
+            <div className="card text-center menu-wrapper">
+                <div className="card-header">
+                    <ul className="nav nav-pills card-header-pills">
+                    <li className="nav-item">
                         
                         <button className="nav-link active" title="Back to Home"
                     onClick={
@@ -33,7 +40,7 @@ class MenuBar extends React.Component{
                     </button>
                     </li>
                     
-                    <li class="nav-item">
+                    <li className="nav-item">
                     {
                     timeLimit && <React.Fragment>
                         <ReactStopWatch

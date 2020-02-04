@@ -85,7 +85,7 @@ class ScoreBoard extends React.Component{
                                 </tr>
                                 <tr>
                                     <td colSpan="2">
-                                        <span class={remarkClass}>{remarks}</span>
+                                        <span className={remarkClass}>{remarks}</span>
                                     </td>
                                 </tr>
                                 

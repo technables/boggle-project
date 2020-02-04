@@ -7,14 +7,14 @@ const BoardLayout = props =>{
 
     return (
         <div className="board-wrapper row">
-            <div class="board-area">
+            <div className="board-area">
             {board.map((data,index)=>{
                 return (
                     <div className="row-item" key={index}>
                         {data.map(cell=>{
                             return (
                                 <Cell 
-                                    extraClass={`cell-${board.length}`}
+                                    extraClass=''
                                     hint = {cell.hint}
                                     selected = {cell.selected}
                                     letter={cell.letter}
@@ -31,13 +31,13 @@ const BoardLayout = props =>{
                 );
             })}
             </div>
-            <div class="board-hint">
+            <div className="board-hint">
                 
-                <div class="hint-row">
+                <div className="hint-row">
                     <Cell letter="S" key="hint" selected="true" hint="false"/>
                     <span className="hint-title"> : selected cell</span>
                 </div>
-                <div class="hint-row">
+                <div className="hint-row">
                     <Cell letter="H" key="hint" selected="" hint="true"/>
                     <span className="hint-title"> : available cell</span>
                 </div>
