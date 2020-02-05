@@ -48,7 +48,7 @@ describe "[Process Word]", :type => :request do
     #Test Case 3
     #valid request
 
-    it "process word and provide its score", :focus => true do
+    it "process word and provide score", :focus => true do
         get "/v1/api/processword?word=boggle"
         expect(response).to  have_http_status(:ok)
 
@@ -92,7 +92,7 @@ describe "[Process Word]", :type => :request do
     end
 
     # Test Case 6
-    # long word provided but max score should be 11
+    # long word provided but max score can be 11
 
     it "provided wrong word ", :focus => true do
         get "/v1/api/processword?word=abbreviations"

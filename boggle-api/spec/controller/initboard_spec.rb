@@ -58,7 +58,7 @@ describe "[Initiate a new board]", :type=> :request do
     end
 
     # Test Case 4
-    # board type provided with less than 3
+    # board type provided with less than 3 value
 
     it "can not submit with low board type", :focus =>true do
         type = 1
@@ -74,7 +74,7 @@ describe "[Initiate a new board]", :type=> :request do
     end
 
     # Test Case 5
-    # board type provided valid board type
+    # board type provided invalid board type
 
     it "can not submit with invalid board type", :focus =>true do
         type = 'asd'
