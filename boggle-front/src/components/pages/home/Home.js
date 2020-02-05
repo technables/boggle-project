@@ -82,32 +82,32 @@ handleSubmit(e){
           </thead>
           <tbody>
             <tr>
-              <td scope="row"> &lt;3</td>
+              <th scope="row"> &lt;3</th>
               <td>0</td>
               
             </tr>
             <tr>
-              <td scope="row">3</td>
+              <th scope="row">3</th>
               <td>1</td>
             </tr>
             <tr>
-              <td scope="row">4</td>
+              <th scope="row">4</th>
               <td>2</td>
             </tr>
             <tr>
-              <td scope="row">5</td>
+              <th scope="row">5</th>
               <td>3</td>
             </tr>
             <tr>
-              <td scope="row">6</td>
+              <th scope="row">6</th>
               <td>4</td>
             </tr>
             <tr>
-              <td scope="row">7</td>
+              <th scope="row">7</th>
               <td>5</td>
             </tr>
             <tr>
-              <td scope="row">8+</td>
+              <th scope="row">8+</th>
               <td>11</td>
             </tr>
 

@@ -27,7 +27,7 @@ class ScoreBoard extends React.Component{
     }
 
     render(){
-        let {trials, wordList, wrongAttempt} = this.props;
+        let {trials, wordList} = this.props;
 
         let totalScore = 0;
         let totalCorrect = 0;
@@ -39,7 +39,7 @@ class ScoreBoard extends React.Component{
         let remarks = "Oops!! There seems you fail to find any word";
 
         
-        let remarkClass = "timer-red"
+        let remarkClass = "timer-red";
         if(wordList){
             totalScore = Object.values(wordList).reduce((totalScore,next)=>{
                 return totalScore+next;
@@ -49,12 +49,12 @@ class ScoreBoard extends React.Component{
 
             if(totalScore<10){
                 remarkClass = 'timer-yellow';
-                let remarkArray = [
+                let remarkLowArray = [
                     "Oops!! Low score. You can always do better",
                     "Oops!! Low score. Better luck next time"
                 ];
-                var randomChoice = Math.floor(Math.random() * remarkArray.length);
-                remarks = remarkArray[randomChoice];
+                var choice = Math.floor(Math.random() * remarkLowArray.length);
+                remarks = remarkLowArray[choice];
             }
             else if(totalScore>10){
                 remarkClass="timer-green";

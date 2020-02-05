@@ -13,10 +13,7 @@ import 'react-toastify/dist/ReactToastify.css';
 
 import InternalRoute from './components/controls/internalRoute/InternalRoute';
 class App extends React.Component{
-    constructor(props){
-        super(props);
-    }
-
+    
     render(){
         
         const dRoute = defaultRoute.map((route, index)=>{

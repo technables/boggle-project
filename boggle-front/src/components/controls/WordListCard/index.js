@@ -6,9 +6,7 @@ import './wordlistcard.css'
 
 
 class WordListCard extends React.Component {
-    constructor(props) {
-        super(props);
-    }
+   
 
     render() {
         const {

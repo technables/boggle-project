@@ -5,8 +5,8 @@ import CurrentWord from '../../controls/CurrentWord';
 import ScoreBoard from '../../controls/ScoreBoard';
 import {actionList} from '../../../services/store';
 import {shuffleBoard,
-isCellEqual,
-isAdjacent,
+areCellEqual,
+areAdjacent,
 toggleHints,
 clearHints,
 copyBoard} from '../../../settings/boardUtil';
@@ -68,7 +68,7 @@ class Board extends React.Component{
             if(currentCell.selected){
                     
                 //checking if clicked on same cell, if so setting state as unselected
-                if(isCellEqual(currentCell, lastCell)){
+                if(areCellEqual(currentCell, lastCell)){
                     let newBoard = copyBoard(this.state.board);
                     newBoard[row][column].selected = false;
                     let currentPosition = this.state.currentWordPosition.slice(0,-1);
@@ -90,7 +90,7 @@ class Board extends React.Component{
                 } 
             }
             else {
-                if(!lastCell || isAdjacent(currentCell, lastCell)){
+                if(!lastCell || areAdjacent(currentCell, lastCell)){
                     var newBoard = copyBoard(this.state.board);
                     newBoard[row][column].selected = true;
 

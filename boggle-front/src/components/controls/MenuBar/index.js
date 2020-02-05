@@ -11,10 +11,7 @@ import {MessageHelper} from '../../../settings/messageHelper'
 
 
 class MenuBar extends React.Component{
-    constructor(props){
-        super(props);
-    }
-
+    
     routeChange(){
         this.props.history.push("/scoreboard");
         ShowMessage(MessageType.END,
@@ -56,7 +53,10 @@ class MenuBar extends React.Component{
                                 ({formatted,hours, minutes,seconds})=>{
                                     var timerClass="timer-green";
                                     if(minutes>=1 && seconds>=30)
+                                    {
                                         timerClass="timer-red";
+                                        ShowMessage(MessageType.EXISTS, "Hurry up!! Last 30 secs left.");
+                                    }
                                     else if (minutes>=1)
                                         timerClass="timer-yellow";
 
@@ -85,6 +85,5 @@ function mapStateToProps(state){
     return {timeLimit};
 }
 
-//MenuBar = connect(mapStateToProps)(MenuBar);
 
 export default compose(withRouter, connect(mapStateToProps))(MenuBar);

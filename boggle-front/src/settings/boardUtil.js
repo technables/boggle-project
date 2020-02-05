@@ -9,9 +9,9 @@ import {
 String.prototype.chunk = function (size) {
   return [].concat.apply([],
     this.split('').map(function (x, i) {
-      return i % size ? [] : this.slice(i, i + size)
+      return i % size ? [] : this.slice(i, i + size);
     }, this)
-  )
+  );
 }
 
 /**
@@ -102,7 +102,7 @@ export const shuffleBoard = (boardData, boardSize) => {
 
     let strLength = boardData.length;
 
-    if (strLength / boardSize != boardSize) return [];
+    if (strLength / boardSize !== boardSize) return [];
 
     boardData = boardData.shuffle();
     const dice = boardData.chunk(boardSize);
@@ -135,14 +135,14 @@ export const copyBoard = board => {
   return copiedBoard;
 };
 
-export const isCellEqual = (cell1, cell2) => {
+export const areCellEqual = (cell1, cell2) => {
   if (!cell1 || !cell2) return false;
   return cell1.row === cell2.row && cell1.column === cell2.column;
 };
 
-export const isAdjacent = (cell1, cell2) => {
+export const areAdjacent = (cell1, cell2) => {
   if (!cell1 || !cell2) return false;
-  if (isCellEqual(cell1, cell2)) {
+  if (areCellEqual(cell1, cell2)) {
     return false;
   }
 
